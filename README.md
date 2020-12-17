@@ -2,6 +2,7 @@
 Ubuntu
 ```
 $vi /etc/crontab
+
 # m h dom mon dow user  command
 */2 * * * *   root /bin/sh  /var/www/html/app-folder/script-file.sh >> /var/www/html/app-folder/script-file.log
 ```
@@ -16,4 +17,9 @@ database="yourDatabase"
 now=$(date +"%T")
 mysql --user="$username" --password="$password" --database="$database" --execute="SELECT * FROM sample_table"
 echo "Successfull selected all rows! Time: $now"
+```
+Cron Commands
+```
+crontabl -l  -check current running crontabs
+service cron status/start/stop  -service of cron
 ```
